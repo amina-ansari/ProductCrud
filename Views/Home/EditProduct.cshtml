@@ -1,0 +1,28 @@
+﻿@model Product2.Controllers.Product2.Controllers.Product
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Product</title>
+</head>
+<body>
+    <h2>Edit Product</h2>
+    @using (Html.BeginForm("EditProduct", "Home", FormMethod.Post))
+    {
+        @Html.HiddenFor(model => model.Id)
+        <div>
+            @Html.LabelFor(model => model.Name)
+            @Html.TextBoxFor(model => model.Name)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Price)
+            @Html.TextBoxFor(model => model.Price)
+        </div>
+        <button type="submit">Save Changes</button>
+    }
+</body>
+</html>
+
+
+
